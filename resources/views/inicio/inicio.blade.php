@@ -19,8 +19,16 @@
             text-decoration: none;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
 </head>
 <body>
     @include('inicio.componentes.navbar')
+    @include('inicio.componentes.banner')
+    @include('inicio.componentes.tarjetas')
+    @include('inicio.componentes.tabla')
+    @include('inicio.componentes.formulario')
+    @include('inicio.componentes.acordeon')
+    @include('inicio.componentes.footer')
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
 </html>
