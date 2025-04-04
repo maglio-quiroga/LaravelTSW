@@ -1,6 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\inicioControlador;
+use App\Http\Controllers\InicioControlador;
 
-Route::get('/', [inicioControlador::class , 'inicio']);
+Route::get('/', [InicioControlador::class , 'inicio']);
