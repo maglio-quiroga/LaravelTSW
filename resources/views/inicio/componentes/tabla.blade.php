@@ -25,6 +25,5 @@
         </tbody>
     </table>
 </div>
-<img src="" alt="imagen de destinos turisticos">
 </div>
 <script src="{{ asset('js/tabla.js') }}"></script>

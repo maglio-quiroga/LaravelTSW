@@ -71,13 +71,6 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
-.tablefull img{
-    flex-grow: 1;
-    max-width: 50%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-}
 .tablebody{
     display: flex; 
     flex-direction: column; 
