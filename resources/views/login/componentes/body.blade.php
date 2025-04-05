@@ -1,21 +1,21 @@
-<div class="container" style="padding_top: 100px">
+<div class="container" style="padding-top: 100px">
     <h1>Iniciar sesión</h1>
-    <form action="" method="GET" class="row g-3 needs-validation" novalidate>
+    <form action="{{ route('autenticacion') }}" method="POST" class="row g-3 needs-validation" novalidate>
+        @csrf
         <div>
-            <label for="inombre">Usuario:</label>
-            <input type="text" class="form-control" name="Usuario_sesion" required>
+            <label for="inombre">Correo Electronico:</label>
+            <input type="email" class="form-control" name="email" required>
             <div class="invalid-feedback">
-                Por favor ingrese el usuario.
+                Por favor ingrese el correo electronico.
             </div>
         </div>
         <div>
             <label for="contrasena_user">Contraseña:</label>
-            <input type="password" class="form-control" name="Contrasena_sesion" required>
+            <input type="password" class="form-control" name="password" required>
             <div class="invalid-feedback">
                 Por favor ingrese la contraseña.
             </div>
         </div>
-        <button type="submit" class="btn btn-primary" name="btnIngresar_sesion">Iniciar sesión</button>
-        <p class="texto_centrado">¿No estás registrado? Regístrate <a href="registro.php">Aquí</a></p>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
     </form>
 </div>
