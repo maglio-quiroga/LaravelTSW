@@ -52,4 +52,4 @@
     </div>
 </div>
 
-<script src="{{ asset('js/inicio/formulario.js') }}"></script>
+<script src="{{ asset('js/inicio/validacion.js') }}"></script>
