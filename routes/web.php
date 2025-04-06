@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioControlador;
 use App\Http\Controllers\LoginControlador;
 use App\Http\Controllers\Actividades;
+use App\Http\Controllers\AdminControlador;
 
 Route::get('/', [InicioControlador::class , 'inicio'])->name('inicio');
 

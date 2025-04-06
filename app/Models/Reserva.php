@@ -5,19 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Actividad extends Model
+class Reserva extends Model
 {
     use HasFactory;
 
-    protected $table = 'actividades';
+    protected $table = 'reservas';
 
     protected $fillable = [
         'nombre',
-        'destino',
-        'categoria',
-        'precio',
-        'duracion',
-        'fecha_inicio',
-        'horario_inicio',
+        'correo',
+        'telefono',
+        'fecha',
+        'hora',
+        'motivo',
     ];
 }
