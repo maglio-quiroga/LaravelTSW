@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+<link rel="stylesheet" href="{{ asset('css/inicio/footer.css') }}">
 <div class="main-content">
         <h1>Bienvenido a Destinos Mágicos ✈️🏝️</h1>
         <p>Explora el mundo con nosotros y descubre paraísos escondidos.</p>
@@ -22,4 +22,4 @@
     <button id="backToTop">↑</button>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="{{ asset('js/footer.js') }}"></script>
+    <script src="{{ asset('js/inicio/footer.js') }}"></script>
