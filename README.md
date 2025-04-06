@@ -3,7 +3,9 @@ COMANDOS DE INSTALACION:
 
 git clone https://github.com/maglio-quiroga/LaravelTSW.git
 <br>
-cd repo
+Desde la ruta C:\xampp\htdocs\nombreDeTuProyecto , usa el siguiente comando para entrar a tu repositorio cd C:/xampp/htdocs/nombreDeTuProyecto
+<br>
+Dentro de tu repositorio ya clonado usa los siguientes comandos:
 <br>
 composer install
 <br>
