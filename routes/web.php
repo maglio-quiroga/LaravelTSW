@@ -5,8 +5,11 @@ use App\Http\Controllers\InicioControlador;
 use App\Http\Controllers\LoginControlador;
 use App\Http\Controllers\Actividades;
 use App\Http\Controllers\AdminControlador;
+use App\Http\Controllers\ReservaControlador;
 
 Route::get('/', [InicioControlador::class , 'inicio'])->name('inicio');
+
+Route::get('/reservas', [ReservaControlador::class, 'getReservas']);
 
 Route::post('/reserform',[InicioControlador::class , 'enviarPeticion'])->name('reserform');
 

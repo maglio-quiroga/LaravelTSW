@@ -3,7 +3,7 @@
     text-align:center;
     padding: 1em;
     padding-top: 50px;
-    color: #416788;
+    color: #132331;
 }
 
 .input-crear{
@@ -61,14 +61,14 @@
 .tablefull{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     overflow: hidden;
     padding: 1%;
     margin-left: 1%;
     margin-right: 1%;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
 .tablebody{
