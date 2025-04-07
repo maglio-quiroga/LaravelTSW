@@ -3,26 +3,27 @@
     <div><img src=""></div>
     
     <div>
-        <form action="" method="POST" class="row g-3 needs-validation" enctype="multipart/form-data" onsubmit="return validar_registro()" novalidate>
+        <form action="{{ route('reserform') }}" method="POST" class="row g-3 needs-validation" enctype="multipart/form-data" onsubmit="return validar_registro()" novalidate>
+        @csrf
         <h1>Agenda un cita</h1>
             <div class="inner">
                 <div><label for="I_nombre">Nombre:</label></div>
                 <div class="inner2">
-                    <input type="text" class="form-control" id="I_nombre">
+                    <input type="text" class="form-control" id="I_nombre" name="nombre">
                     <div id="error-nombre" class="text-danger"></div>
                 </div>
             </div>
             <div class="inner">
                 <div><label for="I_correo">Correo:</label></div>
                 <div class="inner2">
-                    <input type="email" class="form-control" id="I_correo">
+                    <input type="email" class="form-control" id="I_correo" name="correo">
                     <div id="error-correo" class="text-danger"></div>
                 </div>   
             </div>
             <div class="inner">
                 <div><label for="I_telefono">Telefono:</label></div> 
                 <div class="inner2">
-                    <input type="tel" class="form-control" id="I_telefono">
+                    <input type="tel" class="form-control" id="I_telefono" name="telefono">
                     <div id="error-telefono" class="text-danger"></div>
                 </div> 
             </div>
@@ -52,4 +53,4 @@
     </div>
 </div>
 
-<script src="{{ asset('js/inicio/validacion.js') }}"></script>
+<script src="{{ asset('js/inicio/formulario.js') }}"></script>
