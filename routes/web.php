@@ -3,26 +3,28 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioControlador;
 use App\Http\Controllers\LoginControlador;
-use App\Http\Controllers\Actividades;
 use App\Http\Controllers\AdminControlador;
 
-Route::get('/', [InicioControlador::class , 'inicio'])->name('inicio');
+Route::get('/', [InicioControlador::class , 'inicio'])->name('inicio'); //
 
-Route::get('/login', [LoginControlador::class, 'login'])->name('login');
+Route::post('/reserform',[InicioControlador::class , 'enviarPeticion'])->name('reserform'); //
 
-Route::post("/autenticacion",[LoginControlador::class, 'autenticacion'])->name('autenticacion');
+Route::get('/login', [LoginControlador::class, 'login'])->name('login'); //
 
-Route::get('/logout',[LoginControlador::class,'logout'])->name('logout');
+Route::post("/autenticacion",[LoginControlador::class, 'autenticacion'])->name('autenticacion'); //
 
-Route::get('/admin',function (){echo "AcA estara el admin";})->middleware('auth')->name('admin');
+Route::get('/logout',[LoginControlador::class,'logout'])->name('logout'); //
 
+Route::get('/admin',[AdminControlador::class , 'admin'])->middleware('auth')->name('admin'); //
 
-Route::prefix('admin')->name('admin.actividades.')->group(function () {
-    Route::get('actividades', [Actividades::class, 'LISTAR_ACTIVIDADES'])->name('listar');
-    Route::get('actividades/crear', [Actividades::class, 'FORMULARIO_CREAR'])->name('crear');
-    Route::post('actividades', [Actividades::class, 'GUARDAR_ACTIVIDAD'])->name('guardar');
-    Route::get('actividades/{id}/editar', [Actividades::class, 'FORMULARIO_EDITAR'])->name('editar');
-    Route::put('actividades/{id}', [Actividades::class, 'ACTUALIZAR_ACTIVIDAD'])->name('actualizar');
-    Route::delete('actividades/{id}', [Actividades::class, 'ELIMINAR_ACTIVIDAD'])->name('eliminar');
-    Route::get('actividades/{id}', [Actividades::class, 'MOSTRAR_ACTIVIDAD'])->name('mostrar');
-});
+Route::get('/publicaciones', [AdminControlador::class , 'publicaciones'])->middleware('auth')->name('publicaciones'); //
+
+Route::post('/crearpublicacion', [AdminControlador::class , 'crearPublicacion'])->middleware('auth')->name('crearpublicacion');//
+
+Route::get('/modificarpublicacion/{id}', [AdminControlador::class , 'modificarPublicacion'])->middleware('auth')->name('modificarpublicacion');
+
+Route::post('/actualizarpublicacion', [AdminControlador::class , 'actualizarPublicacion'])->middleware('auth')->name('actpublicacion');
+
+Route::post('/eliminarpublicacion', [AdminControlador::class , 'eliminarPublicacion'])->middleware('auth')->name('delpublicacion');
+
+Route::get('/noticias', function() {echo "noticasss";})->middleware('auth')->name('noticias');
