@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/formulario.css') }}">
 <div class="formulario">
-    <div><img src=""></div>
+    <div><img src="{{ asset('img/form.jpg') }}" class="imgdesaparece"></div>
     
     <div>
         <form action="" method="POST" class="row g-3 needs-validation" enctype="multipart/form-data" onsubmit="return validar_registro()" novalidate>

@@ -13,7 +13,7 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #F4F4F5;
+            background-color: #FFFFFF;
         }
         a {
             text-decoration: none;

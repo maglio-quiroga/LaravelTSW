@@ -40,7 +40,7 @@
     padding: 10px;
     gap: 10px;
     margin-bottom: 50px;
-    background-color:rgb(238, 238, 238);
+    background-color:rgb(134, 156, 194);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -68,8 +68,15 @@
     margin-right: 1%;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.233);
     margin-bottom: 40px;
+}
+.tablefull img{
+    flex-grow: 1;
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 .tablebody{
     display: flex; 
@@ -93,3 +100,9 @@ td{
     color:rgb(134, 156, 194);
 
 }
+
+@media (max-width:  1000px) {
+    .imgdesaparece {
+      display: none;
+    }
+}   
