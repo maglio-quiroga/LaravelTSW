@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/acordeon.css') }}">
+<link rel="stylesheet" href="{{ asset('css/inicio/acordeon.css') }}">
 <div class="container">
       <h2 style="color:#416788;">ACLAREMOS TUS DUDAS</h2>
       <div class="faqs">
@@ -69,4 +69,4 @@
       </div>
 </div>
 
-<script src="{{ asset('js/acordeon.js') }}"></script>
+<script src="{{ asset('js/inicio/acordeon.js') }}"></script>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/tabla.css') }}">
+<link rel="stylesheet" href="{{ asset('css/inicio/tabla.css') }}">
 <div class="tablefull">
     <div class="tablebody"> 
         <h1 class="titulotabla">Tabla Dinámica con JavaScript</h1>
@@ -26,4 +26,4 @@
     </div>
     <img src="{{ asset('img/booking.jpg') }}" class="imgdesaparece">
 </div>
-<script src="{{ asset('js/tabla.js') }}"></script>
+<script src="{{ asset('js/inicio/tabla.js') }}"></script>

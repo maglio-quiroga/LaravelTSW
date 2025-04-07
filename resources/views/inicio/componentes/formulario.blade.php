@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/formulario.css') }}">
+<link rel="stylesheet" href="{{ asset('css/inicio/formulario.css') }}">
 <div class="formulario">
     <div><img src="{{ asset('img/form.jpg') }}" class="imgdesaparece"></div>
     
@@ -52,4 +52,4 @@
     </div>
 </div>
 
-<script src="{{ asset('js/formulario.js') }}"></script>
+<script src="{{ asset('js/inicio/validacion.js') }}"></script>

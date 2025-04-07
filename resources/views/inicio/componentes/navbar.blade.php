@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+<link rel="stylesheet" href="{{ asset('css/inicio/navbar.css') }}">
 <header class="header">
     <a href="#" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}" style="height: 60px;" alt="logo de la pagina" class="img"></a>
     <nav class="navbar">
@@ -10,4 +10,4 @@
     </button>
 </header>
 
-<script src="{{ asset('js/navbar.js') }}"></script>
+<script src="{{ asset('js/inicio/navbar.js') }}"></script>
