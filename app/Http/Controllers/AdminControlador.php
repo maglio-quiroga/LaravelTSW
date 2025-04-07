@@ -38,7 +38,7 @@ class AdminControlador extends Controller
     public function crearPublicacion(Request $request){
         $validatedData = $request->validate([
             'titulo'      => 'required|string|max:255',
-            'imagen'      => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'imagen'      => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'descripcion' => 'required|string',
             'id_noticias' => 'required|exists:noticias,id',
         ]);
