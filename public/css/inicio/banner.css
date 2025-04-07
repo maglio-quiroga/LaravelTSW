@@ -1,0 +1,21 @@
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* fondo negro semitransparente */
+    padding: 0.75rem 1rem;
+    /* padding reducido */
+    border-radius: 10px;
+    color: white !important;
+    max-width: 400px;
+    /* ancho máximo más pequeño */
+    margin: 0 auto;
+    /* centrar horizontalmente */
+    bottom: 2rem;
+    /* separarlo un poco del borde inferior */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.3rem;
+}
