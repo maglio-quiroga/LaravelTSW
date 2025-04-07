@@ -11,18 +11,19 @@
 @include('admin.componentes.navbar')
 <div class="container mt-5 pt-4">
 <h1>Gestion de Publicaciones</h1>
+<h2>Modificar Publicación: {{ $publicacion->titulo }}</h2>
     <div class="card mb-4">
         <div class="card-header">
-            Añadir Nueva Publicación
+            Ajuste los campos
         </div>
         <div class="card-body">
-            <form action="{{ route('crearpublicacion') }}" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
                 @csrf 
                 <div class="row align-items-end">
                     <div class="col-md-3">
                         <div class="mb-3">
                             <label for="titulo" class="form-label">Título</label>
-                            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el título">
+                            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el título" value="{{ $publicacion->titulo }}">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -34,7 +35,7 @@
                     <div class="col-md-3">
                         <div class="mb-3">
                             <label for="descripcion" class="form-label">Descripción</label>
-                            <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese la descripción">
+                            <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese la descripción" value="{{ $publicacion->descripcion }}">
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -42,50 +43,29 @@
                             <label for="id_noticias" class="form-label">Noticia</label>
                             <select class="form-select" id="id_noticias" name="id_noticias">
                                 <option value="">Seleccione una noticia</option>
-                                @foreach ($noticias as $noticia)
-                                    <option value="{{ $noticia->id }}">{{ $noticia->titulo }}</option>
+                                @foreach($noticias as $noticia)
+                                    <option value="{{ $noticia->id }}" 
+                                        {{ $publicacion->id_noticias == $noticia->id ? 'selected' : '' }}>
+                                        {{ $noticia->titulo }}
+                                    </option>
                                 @endforeach
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-1">
-                        <button type="submit" class="btn btn-success w-100">
-                            Añadir
+                    <input type="hidden" name="id_publicacion" value="{{ $publicacion->id }}">
+                    <div class="col-md-2">
+                        <button type="submit" formaction="{{ route('actpublicacion') }}" class="btn btn-success w-100">
+                            Actualizar
+                        </button>
+                        <button type="submit" formaction="{{ route('delpublicacion') }}" class="btn btn-danger w-100 mt-2" onclick="alert('Estas a punto de eliminar este registro!')">
+                            Eliminar
                         </button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-
-    <table class="table table-striped table-bordered align-middle">
-        <thead class="table-dark">
-            <tr>
-                <th>ID</th>
-                <th>Título</th>
-                <th>Ruta Imagen</th>
-                <th>Descripción</th>
-                <th>Noticia Asociada</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($publicaciones as $publicacion)
-                <tr>
-                    <td>{{ $publicacion->id }}</td>
-                    <td>{{ $publicacion->titulo }}</td>
-                    <td>{{ $publicacion->imagen }}</td>
-                    <td>{{ $publicacion->descripcion }}</td>
-                    <td>{{ $publicacion->noticia->titulo ?? 'Sin Noticia' }}</td>
-                    <td>
-                        <a href="{{ route('modificarpublicacion', ['id' => $publicacion->id]) }}" class="btn btn-primary btn-sm">
-                            <i class="bi bi-pencil-square"></i> Modificar
-                        </a>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <p>Si no quiere cambiar la imagen deje vacio el campo.</p>
 </div>
     
 </body>
