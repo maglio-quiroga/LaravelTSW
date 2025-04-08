@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/inicio/navbar.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <header class="header">
     <a href="#" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}" style="height: 60px;" alt="logo de la pagina" class="img"></a>
     <nav class="navbar">
