@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/inicio/tabla.css') }}">
-<div class="tablefull">
+<div class="tablefull fade-in">
     <div class="tablebody"> 
         <h1 class="titulotabla">Tabla Dinámica con JavaScript</h1>
         <!--formulario para datitos-->
@@ -24,6 +24,6 @@
             </tbody>
         </table>
     </div>
-    <img src="{{ asset('img/booking.jpg') }}" class="imgdesaparece">
+    <img src="{{ asset('img/booking.webp') }}" class="imgdesaparece">
 </div>
 <script src="{{ asset('js/inicio/tabla.js') }}"></script>
