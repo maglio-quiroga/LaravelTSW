@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 <div class="logbox">
-    <img src="{{ asset('img/loginSide2.jpeg') }}" alt="imagen de login" class="imgdesaparece">
+    <img src="{{ asset('img/loginSide2.webp') }}" alt="imagen de login" class="imgdesaparece">
     <div class="container" style="padding-top: 100px">
         <h1>Iniciar sesión</h1>
         @if (session('error'))
