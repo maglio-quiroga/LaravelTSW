@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/inicio/tabla.css') }}">
 
-<div class="tablefull">
+<div class="tablefull fade-in">
   <div class="tablebody"> 
     <h1 class="titulotabla">Tabla de Actividades</h1>
 
@@ -40,6 +40,7 @@
       </tbody>
     </table>
   </div>
+  <img src="{{ asset('img/booking.webp') }}" class="imgdesaparece">
 </div>
 
 
