@@ -5,6 +5,7 @@
       <a href="{{ route('admin') }}" class="text-decoration-none">Resumen</a>
       <a href="{{ route('noticias') }}" class="text-decoration-none">Noticias</a>
       <a href="{{ route('publicaciones') }}" class="text-decoration-none">Publicaciones</a>
+      <a href="{{ route('actividades.listar') }}" class="text-decoration-none">Actividades</a>
       <a href="{{ route('logout') }}" class="text-decoration-none">Cerrar Sesion</a>
     </nav>
     <button class="c-hamburguesa" id="btn-hamburguesa">
