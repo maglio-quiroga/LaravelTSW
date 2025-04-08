@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/inicio/formulario.css') }}">
-<div class="formulario">
-    <div><img src=""></div>
+<div class="formulario fade-in">
+    <div><img src="{{ asset('img/form.webp') }}" class="imgdesaparece"></div>
     
     <div>
         <form action="{{ route('reserform') }}" method="POST" class="row g-3 needs-validation" enctype="multipart/form-data" onsubmit="return validar_registro()" novalidate>

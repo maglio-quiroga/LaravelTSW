@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/inicio/acordeon.css') }}">
-<div class="container">
+<div class="container fade-in">
       <h2 style="color:#416788;">ACLAREMOS TUS DUDAS</h2>
       <div class="faqs">
         @foreach ($faqs as $faq)
@@ -10,7 +10,7 @@
               <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z" fill="black" />
             </svg>
           </div>
-          <div class="content">
+          <div class="content fade-in">
             <p>
             {{ $faq->texto }}
             </p>

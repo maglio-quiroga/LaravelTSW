@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="{{ asset('css/inicio/footer.css') }}">
-<div class="main-content">
+<div class="main-content fade-in">
         <h1>Bienvenido a Destinos Mágicos ✈️🏝️</h1>
         <p>Explora el mundo con nosotros y descubre paraísos escondidos.</p>
     </div>
 
     <!--nueva seccion mejorada con partis-->
-    <div class="particles-section">
+    <div class="particles-section fade-in">
         <div id="particles-js"></div>
         <div class="footer-content">
             <p>🌍 Agencia de Viajes - Explora el mundo con nosotros</p>
