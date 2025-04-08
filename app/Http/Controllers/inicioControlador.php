@@ -3,13 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Noticia;
+use App\Models\Publicacion;
+use App\Models\Actividad;
+use App\Models\PreguntaFrequente;
 use App\Models\Reserva;
 
 class InicioControlador extends Controller
 {
     //
     public function inicio(){
-        return view('inicio.inicio');
+        $noticias = Noticia::all();
+        $publicaciones = Publicacion::all();
+        $actividades = Actividad::all();
+        $faqs = PreguntaFrequente::all();
+
+        return view('inicio.inicio', compact('noticias','publicaciones','actividades','faqs'));
     }
 
     public function enviarPeticion(Request $request){
