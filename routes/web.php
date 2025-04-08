@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioControlador;
 use App\Http\Controllers\LoginControlador;
 use App\Http\Controllers\AdminControlador;
+use App\Http\Controllers\NoticiasControlador;
 use App\Http\Controllers\ActividadesControlador;
+
 
 Route::get('/', [InicioControlador::class , 'inicio'])->name('inicio'); //
 
@@ -18,6 +20,8 @@ Route::get('/logout',[LoginControlador::class,'logout'])->name('logout'); //
 
 Route::get('/admin',[AdminControlador::class , 'admin'])->middleware('auth')->name('admin'); //
 
+// Publicaciones
+
 Route::get('/publicaciones', [AdminControlador::class , 'publicaciones'])->middleware('auth')->name('publicaciones'); //
 
 Route::post('/crearpublicacion', [AdminControlador::class , 'crearPublicacion'])->middleware('auth')->name('crearpublicacion');//
@@ -28,7 +32,15 @@ Route::post('/actualizarpublicacion', [AdminControlador::class , 'actualizarPubl
 
 Route::post('/eliminarpublicacion', [AdminControlador::class , 'eliminarPublicacion'])->middleware('auth')->name('delpublicacion');
 
-Route::get('/noticias', function() {echo "noticasss";})->middleware('auth')->name('noticias');
+Route::get('/noticias', [NoticiasControlador::class , 'noticias'])->middleware('auth')->name('noticias');
+
+Route::get('/modificarnoticia/{id}', [NoticiasControlador::class , 'modificarNoticia'])->middleware('auth')->name('modificarnoticia');
+
+Route::post('/crearnoticia', [NoticiasControlador::class , 'crearNoticia'])->middleware('auth')->name('crearnoticia');
+
+Route::post('/actualizarnoticia', [NoticiasControlador::class , 'actualizarNoticia'])->middleware('auth')->name('actnoticia');
+
+Route::post('/eliminarnoticia', [NoticiasControlador::class , 'eliminarNoticia'])->middleware('auth')->name('delnoticia');
 
 Route::get('/actividades', [ActividadesControlador::class, 'LISTAR_ACTIVIDADES'])->middleware('auth')->name('actividades.listar');
 
@@ -41,3 +53,4 @@ Route::get('/actividades/editar/{id}', [ActividadesControlador::class, 'FORMULAR
 Route::post('/actividades/actualizar/{id}', [ActividadesControlador::class, 'ACTUALIZAR_ACTIVIDAD'])->middleware('auth')->name('actividades.actualizar');
 
 Route::post('/actividades/eliminar/{id}', [ActividadesControlador::class, 'ELIMINAR_ACTIVIDAD'])->middleware('auth')->name('actividades.eliminar');
+
