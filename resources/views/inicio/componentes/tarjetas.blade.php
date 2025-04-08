@@ -2,16 +2,22 @@
 
 <div class="fade-in" style=" margin-top: 40px;">
     <h1 class="title">Experimenta un Paseo Inolvidable</h1>
-	<div class="tarjetas">
-		@foreach ($publicaciones as $publicacion)
-		<div class="tarjeta">
-			<h2>{{ $publicacion->titulo }}</h2>
-			<img src="{{  $publicacion->imagen }}" alt="imagen publicación">
-			<h3>{{  $publicacion->noticia->titulo }}</h3>
-			<p> {{ $publicacion->descripcion }}</p>
-		</div>
-		@endforeach
-	</div>
+	<div class="container my-4">
+    <div class="row">
+        @foreach ($publicaciones as $publicacion)
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{ $publicacion->imagen }}" class="card-img-top" alt="imagen publicación">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $publicacion->titulo }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ $publicacion->noticia->titulo }}</h6>
+                        <p class="card-text">{{ $publicacion->descripcion }}</p>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
     
 </div>
 <script src="{{ asset('js/inicio/tarjetas.js') }}"></script>
