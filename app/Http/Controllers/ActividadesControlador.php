@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Actividad;
 
-class Actividades extends Controller
+class ActividadesControlador extends Controller
 {
     public function LISTAR_ACTIVIDADES()
     {
@@ -58,7 +58,7 @@ class Actividades extends Controller
             'precio' => 'required|numeric',
             'duracion' => 'required|integer',
             'fecha_inicio' => 'required|date',
-            'horario_inicio' => 'required|time',
+            'horario_inicio' => 'required|date_format:H:i',
         ]);
 
         $actividad = Actividad::findOrFail($id);
