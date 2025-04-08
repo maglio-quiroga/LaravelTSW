@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginControlador;
 use App\Http\Controllers\Actividades;
 use App\Http\Controllers\AdminControlador;
 
+
 Route::get('/', [InicioControlador::class , 'inicio'])->name('inicio');
 
 Route::post('/reserform',[InicioControlador::class , 'enviarPeticion'])->name('reserform');
@@ -29,3 +30,9 @@ Route::post('/actividades/{id}/actualizar', [Actividades::class, 'ACTUALIZAR_ACT
 Route::post('/actividades/{id}/eliminar', [Actividades::class, 'ELIMINAR_ACTIVIDAD'])->name('actividades.eliminar');
 
 Route::get('/actividades/{id}', [Actividades::class, 'MOSTRAR_ACTIVIDAD'])->name('actividades.mostrar');
+// routes/web.php
+
+use App\Http\Controllers\PreguntaFrecuenteControlador;
+
+Route::get('/preguntas-frecuentes', [PreguntaFrecuenteControlador::class, 'mostrarFaqs']);
+

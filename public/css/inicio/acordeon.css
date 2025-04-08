@@ -8,7 +8,7 @@
     padding-top: 50px;
 }
 
-.content > p{
+.content > p {
     color: #416788;
 }
 
@@ -33,9 +33,16 @@ h2 {
     overflow-y: hidden;
     transition: height 0.25s ease-in;
     border-bottom: 1px solid #afafaf;
+    padding: 0 25px; /* Añadido para evitar que el texto se vea cortado cuando el acordeón se expande */
 }
 
 /* Cuando esta activo */
 .faqs .faq.active .head svg {
     transform: rotate(180deg);
+}
+
+/* Opcional: agregar un efecto de transición en el contenido para un deslizamiento suave */
+.faqs .faq.active .content {
+    height: auto; /* Esto hará que el acordeón se expanda de manera fluida */
+    padding: 15px 25px; /* Asegura un buen espaciado al expandir */
 }

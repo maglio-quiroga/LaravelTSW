@@ -1,20 +1,23 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Reserva;
+use App\Models\PreguntaFrecuente;
 
 class InicioControlador extends Controller
 {
-    //
-    public function inicio(){
-        return view('inicio.inicio');
+    public function inicio()
+    {
+        // Obtén las preguntas frecuentes desde la base de datos
+        $faqs = PreguntaFrecuente::all();
+
+        // Pasa las preguntas frecuentes a la vista
+        return view('inicio.inicio', compact('faqs'));
     }
 
-    public function enviarPeticion(Request $request){
-
-      
+    public function enviarPeticion(Request $request)
+    {
         $credenciales = [
             'nombre'  => $request->post('nombre'),
             'correo'  => $request->post('correo'),
@@ -29,6 +32,6 @@ class InicioControlador extends Controller
 
         // Redireccionar a la página de inicio con un mensaje de éxito
         return redirect()->route('inicio');
-    
     }
 }
+
